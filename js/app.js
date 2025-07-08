@@ -8,9 +8,6 @@ const minTemp = document.querySelector('.min-temp-container')
 
 
 
-// WEATHER ICON CONTAINER
-const weatherIconContainer = document.querySelector('.weather-icon-container')
-console.log("🚀 ~ weatherIconContainer:", weatherIconContainer)
 
 // console.log("🚀 ~ minTemp:", minTemp)
 // // console.log("🚀 ~ currentTemp:", currentTemp)
@@ -59,17 +56,3 @@ currentTemp.innerText=`${currentTempC}°C`;
 }
 
 
-function displayIcon(data){
-// const weather_conditions = new Map([
-//   ["clearDay", 500],
-//   ["bananas", 300],
-//   ["oranges", 200]
-// ]);
-
-weatherIconContainer.innerHTML=`<img class="weather-icon" src="assets/weather-icons-container/animated/partly-cloudy-day.svg">`;
-
-
-
-
-
-}

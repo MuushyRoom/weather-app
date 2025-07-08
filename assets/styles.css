@@ -26,35 +26,39 @@ min-height: 100vh;
 }
 
 .card-container{
-    border: 2px solid #ffffff;
-  border-radius: 1rem;
-  background-color:#64a6f165;
-  padding: 0px 0px;
+
   display: flex;
   flex-direction: column;
+  gap: 20px;
 
 }
-
+.header-title{
+    text-shadow: 2px 2px #00000059;  
+}
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 15px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.466);
+    background-color:#579ff11e;
+    border-radius: 1rem;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
 }
 
 /* CONTENT */
 .content-container{
-  
+   background-color:#579ff11e;
 display: flex;
-padding: 10px 10px;
+padding: 20px 20px;
 justify-content: center;
 align-items: center;
 border-bottom: 1px solid white;
 border-top: 1px solid white;
 border-radius: 2rem;
 height: max-content;
+gap: 25px;
 }
 
 .daily-weather-container{
@@ -64,30 +68,33 @@ align-self: center;
 gap: 5px;
 padding: 25px 0px;
 width: 50%;
+height: 100%;
 padding-left: 25px;
+  background-color:#97ccf765;
+border-bottom: 2px solid white;
+border-top: 2px solid white;
+border-radius:3rem;
+
 
 }
 .weather-icon-container{
+    background-color:#97ccf765;
 width: 50%;
-justify-self: end;
-align-content: start;
-border-bottom: 1px solid white;
-border-top: 1px solid white;
-border-radius: 2rem;
+border-bottom: 2px solid white;
+border-top: 2px solid white;
+border-radius: 3rem;
+min-height: 100%;
+justify-content: center;
+align-content: center;
 }
 
 
 .weather-icon{
-
-          width: 100%;
-
+display: block;
+  margin: auto;
+  width: 100%;
 
 }
-
-
-/* *{
-    border: 1px solid rgb(0, 0, 0);
-} */
 
 
 /* FIXED */
@@ -112,7 +119,7 @@ margin-top: 5px;
 .feels-like-temp{
     padding: 10px;
  text-align: center;
- border-bottom: 1px solid white;
+
 }
 
 /*  */
