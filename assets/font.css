@@ -114,8 +114,9 @@ p{
   padding: 0;
 margin: 0; 
 }
+
 .primary-text{
- font-size: 6rem;
+ font-size: 4rem;
 align-self: center;
 font-weight: 700;
 letter-spacing: 5px;

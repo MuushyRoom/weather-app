@@ -1,7 +1,8 @@
 
 // WEATHER ICON CONTAINER
 const weatherIconContainer = document.querySelector('.weather-icon-container')
-
+const maxTemp = document.querySelector('.max-temp-container')
+const minTemp = document.querySelector('.min-temp-container')
 
 
 const weather_conditions = {
@@ -32,15 +33,51 @@ const weather_conditions = {
 
 
 
-
-
-
 function displayIcon(data){
-console.log(data.weather[0].icon)
+// console.log(data.weather[0].icon)
 // const updated_weather = "50n";
 const updated_weather = data.weather[0].icon;
 const weather = weather_conditions.day[updated_weather] || weather_conditions.night[updated_weather]
-weatherIconContainer.innerHTML=`<img class="weather-icon" src="assets/weather-icons-container/animated/${weather}">`;
+const humidity = data.main.humidity
+const wind = data.wind.gust * 3.6
+
+
+
+// GETTING MAX TEMP
+let tempKMax = data.main.temp_max
+let tempCMax = tempKMax - 273.15;
+let tempMax = tempCMax.toFixed(0)
+
+// GETTING MIN TEMP
+let tempKMin = data.main.temp_min
+let tempCMin = tempKMin - 273.15;
+let tempMin = tempCMin.toFixed(0)
+
+
+
+weatherIconContainer.innerHTML=`
+<img class="weather-icon" src="assets/weather-icons-container/animated/${weather}">
+<p class="weather-description">${data.weather[0].description}</p>
+ <section class="additional-weather-icon">
+                        <span class="humidity-container">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p class="humidity">${humidity}%</p>
+                        </span>
+                         <span class="wind-speed-container">
+                            <i class="fa-solid fa-wind"></i>
+                            <p class="wind-speed">${wind} km/h</p>
+                        </span>
+                          <section class="secondary-temp-container">
+                        
+                        <span><i class="fa-solid fa-up-long"></i><p class="max-temp-container">${tempMax}°C</p> </span>
+                        <span><i class="fa-solid fa-down-long"></i><p class="min-temp-container">${tempMin}°C</p></span>
+                        
+                        </section>
+                      
+                    </section>
+`;
+
+
 
 
 
