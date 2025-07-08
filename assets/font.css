@@ -102,6 +102,54 @@
 
 .poppins-black-italic {
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 400;
   font-style: italic;
 }
+
+
+
+/* MY CHANGES */
+p{
+  text-shadow: 2px 2px #00000015;
+  padding: 0;
+margin: 0; 
+}
+.primary-text{
+ font-size: 6rem;
+align-self: center;
+font-weight: 700;
+letter-spacing: 5px;
+line-height: 6rem;
+padding-top: 1rem;
+}
+
+.current-day { font-size:2rem;
+padding: 0;
+margin: 0; 
+
+font-weight: 555;
+}
+
+.place-container { font-size: 2.4rem;
+padding: 0;
+margin: 0;
+
+}
+
+
+h4 { font-size: 1.5rem;
+padding: 0;
+margin: 0;
+
+ }
+
+h5 { font-size: 1.25rem;
+padding: 0;
+margin: 0; 
+
+}
+
+h6 { font-size: 1rem;
+padding: 0;
+margin: 0;
+ }

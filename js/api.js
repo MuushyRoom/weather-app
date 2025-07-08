@@ -37,6 +37,7 @@ async function getWeather(lat,lon){
          console.log("🚀 ~ getWeather ~ data:", data)
       
         displayWeather(data)
+        displayIcon(data)
        
     }catch(error){
         console.log(error)
