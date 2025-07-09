@@ -32,7 +32,7 @@ navigator.geolocation.getCurrentPosition(success, error, options)
 async function getWeather(lat,lon){
 
     try{
-    const api_key = "37e5574b2579cb49aa9987e7ece20b6f";
+    const api_key = "";
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
 
          const response = await fetch(url)
