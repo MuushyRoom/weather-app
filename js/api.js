@@ -2,7 +2,7 @@
 import {
 WEATHER_API_KEY,
 TIMEZONE_API_KEY,
-} from '../query.js';
+} from '../api_keys.js';
 
 
 
