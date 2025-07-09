@@ -1,3 +1,12 @@
+// GET API KEYS
+import {
+WEATHER_API_KEY,
+TIMEZONE_API_KEY,
+} from '../query.js';
+
+
+
+
 
 // GEOLOCATION API
 // HEADERS
@@ -15,7 +24,7 @@ const lat = coords.latitude;
 
 // RUN FETCH API IF SUCCESS
 getWeather(lat,lon)
-// getTime(lat,lon)
+getTime(lat,lon)
 }
 
 
@@ -33,7 +42,7 @@ navigator.geolocation.getCurrentPosition(success, error, options)
 async function getWeather(lat,lon){
 
     try{
-    const api_key = "";
+    const api_key = WEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
 
          const response = await fetch(url)
@@ -60,7 +69,7 @@ async function getWeather(lat,lon){
 async function getTime(lat,lon){
 
    try{
-   const time_api_key = "";
+   const time_api_key = TIMEZONE_API_KEY;
     const timezone_query = `http://api.timezonedb.com/v2.1/get-time-zone?key=${time_api_key}&format=json&by=position&lat=${lat}&lng=${lon}`
          
         const response = await fetch(timezone_query)
