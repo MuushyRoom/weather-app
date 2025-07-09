@@ -60,7 +60,7 @@ async function getWeather(lat,lon){
 async function getTime(lat,lon){
 
    try{
-   const time_api_key = "OP8SN3JOUQX2";
+   const time_api_key = "";
     const timezone_query = `http://api.timezonedb.com/v2.1/get-time-zone?key=${time_api_key}&format=json&by=position&lat=${lat}&lng=${lon}`
          
         const response = await fetch(timezone_query)
