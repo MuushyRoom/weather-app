@@ -14,7 +14,7 @@ const lat = coords.latitude;
 
 // RUN FETCH API IF SUCCESS
 getWeather(lat,lon)
-getTime(lat,lon)
+// getTime(lat,lon)
 }
 
 
@@ -48,7 +48,7 @@ async function getWeather(lat,lon){
     }catch(error){
         console.log(error)
     }finally{
-        console.log("FETCH WEATHER API EXECUTED")
+        console.log("W-exec")
     }
   
    
@@ -60,7 +60,7 @@ async function getTime(lat,lon){
 
    try{
    const time_api_key = "OP8SN3JOUQX2";
-const timezone_query = `http://api.timezonedb.com/v2.1/get-time-zone?key=${time_api_key}&format=json&by=position&lat=${lat}&lng=${lon}`
+    const timezone_query = `http://api.timezonedb.com/v2.1/get-time-zone?key=${time_api_key}&format=json&by=position&lat=${lat}&lng=${lon}`
          
         const response = await fetch(timezone_query)
 
@@ -72,9 +72,9 @@ const timezone_query = `http://api.timezonedb.com/v2.1/get-time-zone?key=${time_
             displayLocation(data)
        
     }catch(error){
-        console.log(error)
+        console.log("TIMEZONE API ERROR",error)
     }finally{
-        console.log("TIMEZONE API EXECUTED")
+        console.log("T-exec")
     }
 
 

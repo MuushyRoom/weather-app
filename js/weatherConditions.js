@@ -46,12 +46,12 @@ const wind = data.wind.gust * 3.6
 // GETTING MAX TEMP
 let tempKMax = data.main.temp_max
 let tempCMax = tempKMax - 273.15;
-let tempMax = tempCMax.toFixed(0)
+let tempMax = tempCMax.toFixed(1)
 
 // GETTING MIN TEMP
 let tempKMin = data.main.temp_min
 let tempCMin = tempKMin - 273.15;
-let tempMin = tempCMin.toFixed(0)
+let tempMin = tempCMin.toFixed(1)
 
 
 
@@ -65,7 +65,7 @@ weatherIconContainer.innerHTML=`
                         </span>
                          <span class="wind-speed-container">
                             <i class="fa-solid fa-wind"></i>
-                            <p class="wind-speed">${wind} km/h</p>
+                            <p class="wind-speed">${wind.toFixed(1)} km/h</p>
                         </span>
                           <section class="secondary-temp-container">
                         
