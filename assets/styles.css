@@ -35,7 +35,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 15px;
+  padding: 15px 40px;
   background-color: #579ff11e;
 }
 
@@ -70,7 +70,8 @@ header,
   border-top: 2px solid white;
   border-radius: 2rem;
   background-color: #398ef01e;
-  height: 475px;
+  min-height:475px;
+  max-height: 100vh;
   width: 100%;
 
   /* can change */
@@ -83,21 +84,17 @@ header,
 
 
 
-
 /* BOX LEFT */
 /* DAILY WEATHER CONTAINER */
 .daily-weather-container {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 15px ;
- 
-}
-
-.time-place-day{
+  justify-content: space-evenly;
+  padding: 20px;
 
 }
+
 
 .primary-temp-container{
     align-self: center;
@@ -106,8 +103,54 @@ header,
 
 /* DONT CHANGE */
 .feels-like-temp {
-  padding: 10px;
   text-align: center;
+}
+
+.time-place-day{
+  align-self: center;
+  justify-self: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-place-day span{
+  margin: 0;
+  padding: 0;
+}
+
+.current-day{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.weather-details-container{
+  padding-top: 25px;
+  align-content: center;
+  justify-content: center;
+}
+
+.text-quote{
+ font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px #837f7f4c;
+  text-align: center;
+ word-wrap: break-word;
+}
+
+.text-quote-author{
+   color: rgb(255, 255, 255);
+  text-shadow: 1px 1px #837f7f4c;
+   padding: 0px 15px;
+}
+
+
+.error-message{
+    text-shadow: 2px 2px #6160604c;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -115,14 +158,13 @@ header,
 /* BOX RIGHT */
 /* WEATHER ICON CONTAINER */
 .weather-icon-container {
-width: 50%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-content: end;
-  justify-content: end;
-  gap: 5px;
+  justify-content: space-evenly;
+  padding: 20px;
   position: relative;
-  padding: 1rem 25px;
+ 
 }
 
 /* IMG */
@@ -131,11 +173,10 @@ width: 50%;
   position: absolute;
   bottom: 6rem;
   width: 80%;
+
 }
 
 .weather-description {
-  padding: 0;
-  margin: 0;
   text-transform: capitalize;
   text-align: center;
   align-self: center;
@@ -144,6 +185,7 @@ width: 50%;
   position: absolute;
   bottom: 6rem;
   text-shadow: 2px 2px #a2a3a5be;
+  padding: 0px 15px;
 }
 
 .additional-weather-icon{
@@ -151,19 +193,27 @@ width: 50%;
   gap: 15px;
   align-content: center;
   justify-content: center;
+  justify-self: end;
+  position: relative;
+  padding: 10px;
+  top: 10.9rem;
+  border: 1px solid white;
+  background-color: #d6abe415;
+  border-radius: 4rem;
 }
 
 .humidity-container,.wind-speed-container,.current-time-container{
   display: flex;
   align-items: center;
   gap: 5px;
+    
 }
 
 
 .secondary-temp-container {
   display: flex;
   justify-content: center;
-
+ 
   gap: 10px;
 
 }
@@ -181,30 +231,8 @@ span i{
 }
 
 
-
-
-/* FOOTER */
-.week-weathers {
-  height: inherit;
-  width: 100%;
-  min-height: 110px;
-  flex: 3;
-  height: 100%;
-}
-
-.week-weathers-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 /* others */
 * {
   box-sizing: border-box;
-}
-
-*{
-  /* border: 1px solid black; */
 }
 

@@ -12,7 +12,7 @@ TIMEZONE_API_KEY,
 // HEADERS
 const options = {
     maximumAge:0,
-    enableHighAccuracy: false,
+    enableHighAccuracy: true,
     timeout:3500,
 };
 
@@ -22,6 +22,8 @@ const coords = pos.coords
 const lon = coords.longitude;
 const lat = coords.latitude;
 
+// console.log("🚀 ~ success ~ lat:", lat)
+// console.log("🚀 ~ success ~ lon:", lon)
 // RUN FETCH API IF SUCCESS
 getWeather(lat,lon)
 getTime(lat,lon)
@@ -31,10 +33,14 @@ getTime(lat,lon)
 // error
 const error = (err) => {
 console.log("GEOLOCATION API ",err)
+showError()
 };
 
 //GET USER PERMISSION FOR LOCATION
+
 navigator.geolocation.getCurrentPosition(success, error, options)
+
+
 
 
 // ------------------------------
@@ -58,7 +64,10 @@ async function getWeather(lat,lon){
     }catch(error){
         console.log(error)
     }finally{
-        console.log("W-exec")
+          console.log("w-finally")
+            console.log("#")
+         console.log("#")
+          console.log("#")
     }
   
    
@@ -84,9 +93,56 @@ async function getTime(lat,lon){
     }catch(error){
         console.log("TIMEZONE API ERROR",error)
     }finally{
-        console.log("T-exec")
+          console.log("t-finally")
+            console.log("#")
+         console.log("#")
+          console.log("#")
     }
 
 
    
 }
+
+async function getQuotes(){
+
+
+    let break_loop = true
+
+       try{
+     
+        while(break_loop){
+              const quote_id = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
+    const get_quote = `https://thequoteshub.com/api/quotes/${quote_id}`
+    const response = await fetch(get_quote)
+
+
+        //  TO JSON
+         const data = await response.json()
+       
+       
+            if(data.text.length <= 45){
+                 console.log("QUOTE JSON DATA", data)
+                displayQuotes(data)
+                break_loop = true
+                break;
+            }else{
+
+            }
+       
+        }
+  
+
+        
+    }catch(error){
+        console.log("QUOTE ERROR",error)
+    }finally{
+        console.log("q-finally")
+        console.log("#")
+         console.log("#")
+          console.log("#")
+    }
+
+}
+
+
+getQuotes();
