@@ -52,7 +52,6 @@ const city = data.regionName
 const country = data.countryName
 
 // place all goods
-console.log("🚀 ~ displayLocation ~ currentTime:", currentTime)
 currentDay.innerHTML = ` 
 <span><p class="place-container">${city}, ${country}</p></span>
 <span><p class="current-day">${day}</p></span>`;

@@ -7,7 +7,6 @@ TIMEZONE_API_KEY,
 
 
 
-
 // GEOLOCATION API
 // HEADERS
 const options = {
@@ -22,8 +21,8 @@ const coords = pos.coords
 const lon = coords.longitude;
 const lat = coords.latitude;
 
-// console.log("🚀 ~ success ~ lat:", lat)
-// console.log("🚀 ~ success ~ lon:", lon)
+console.log("🚀 ~ success ~ lat:", lat)
+console.log("🚀 ~ success ~ lon:", lon)
 // RUN FETCH API IF SUCCESS
 getWeather(lat,lon)
 getTime(lat,lon)
@@ -121,7 +120,6 @@ async function getQuotes(){
        
        
             if(data.text.length <= 45){
-                 console.log("QUOTE JSON DATA", data)
                 displayQuotes(data)
                 break_loop = true
                 break;
@@ -146,3 +144,5 @@ async function getQuotes(){
 
 
 getQuotes();
+
+
