@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/font.css">
     <link rel="stylesheet" href="/assets/search_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/d073a8900f.js" crossorigin="anonymous"></script>
         <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap');
@@ -19,9 +20,10 @@
          <header>
             <h5 class="header-title">Weather App</h5>
             
-            <section class="current-time-container">
-                  <i class="fa-solid fa-clock"></i>
-                            <p class="header-time">Loading...</p>
+            <section class="header-time-container">
+                 <div role="status" class="max-w-sm animate-pulse p">
+                <div class="h-5 bg-gray-100 rounded-full dark:bg-white-700 w-48"></div>        
+                </div>
             </section>
 
 <div class="group">
@@ -33,47 +35,51 @@
          <main class="content-container">
             <!-- LEFT BOX CONTAINER -->
             <div class="daily-weather-container">
+                <!-- TIME PLACE DAY CONTAINER -->
                     <section class="time-place-day">
-                        <span class="current-time-container">
-                            <i class="fa-solid fa-clock"></i>
-                            <p class="time">Loading...</p>
-                        </span>
-                <span><p class="place-container">Loading..</p></span>
-                <span><p class="current-day">Loading..</p></span>
-                    </section>
-                      
+                        <!-- TIME CONTAINER -->
+                        <section class="time-container">
+                            
+               <div role="status" class="max-w-sm animate-pulse">
+                <div class="h-5 bg-blue-100 rounded-full dark:bg-white-700 w-48 mb-4"></div>        
+                </div>
+      
+                        </section>
+                        <!-- PLACE AND DAY -->
+                        <section class="day-place-container">
+                               <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2 bg-blue-100 rounded-full dark:bg-white-700 max-w-[360px] mb-5.5"></div>
+                <div class="h-5 bg-blue-100 rounded-full dark:bg-white-700 w-48 mb-4"></div>        
+                </div>
+                        </section>
+                    </section>     
                         <section class="primary-temp-container">
-                <!-- TEMP CONTAINER -->    
-                <p class="primary-temp primary-text">Loading..</p>
-               <p class="feels-like-temp">Loading..</p>
+                <!-- TEMP CONTAINER -->   
+            
+                <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-5 bg-blue-100 rounded-full dark:bg-white-700 max-w-[360px] mb-5.5"></div>
+                <div class="h-1 bg-blue-100 rounded-full dark:bg-white-700 w-48 mb-4"></div>        
+                </div>
                </section>  
                <section class="weather-details-container">
-                  <p class="text-quote">Loading quoutes...</p>
+                <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2 bg-blue-100 rounded-full dark:bg-white-700 max-w-[360px] mb-2.5"></div>
+                <div class="h-2.5 bg-blue-100 rounded-full dark:bg-white-700 w-48 mb-4"></div>        
+                </div>
                </section>  
             </div>
             <!-- WEATHER ICON CONDITION -->
             <div class="weather-icon-container">
-                    <img class="weather-icon" src="assets/weather-icons-container/animated/fair-day.svg">
-                    <p class="weather-description">Loading...</p>
+                                 <img class="weather-icon" src="assets/weather-icons-container/animated/fair-day.svg">
+                         <p class="weather-description h-5 bg-blue-100 rounded-full dark:bg-white-700 w-48"></p>
                     <section class="additional-weather-icon">
-                        <span class="humidity-container">
-                            <i class="fa-solid fa-droplet"></i>
-                            <p class="humidity">Loading...</p>
+                        <span class="humidity-container h-3 bg-blue-100 rounded-full dark:bg-white-700 w-22 self-center ">
+                          
                         </span>
-                         <span class="wind-speed-container">
-                            <i class="fa-solid fa-wind"></i>
-                            <p class="wind-speed">Loading...</p>
+                         <span class="wind-speed-container h-3 bg-blue-100 rounded-full dark:bg-white-700 w-22 self-center ">
                         </span>
-                        <section class="secondary-temp-container">
-                        
-                        <span><i class="fa-solid fa-up-long"></i><p class="max-temp-container">Loading..</p> </span>
-                        <span><i class="fa-solid fa-down-long"></i><p class="min-temp-container">Loading..</p></span>
-                        
+                        <section class="secondary-temp-container  h-3 bg-blue-100 rounded-full dark:bg-white-700 w-22 self-center ">
                         </section>
-                       
-                        
-
-
                     </section>
             </div>
          </main>

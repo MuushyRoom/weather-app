@@ -1,15 +1,10 @@
-const place = document.querySelector('.place-container')
-const currentDay = document.querySelector('.current-day')
-const currentTemp = document.querySelector('.primary-temp')
+const currentTemp = document.querySelector('.primary-temp-container')
 const feelsLikeTemp = document.querySelector('.feels-like-temp')
 const weather_details = document.querySelector('.weather-details-container')
 
-// get day
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const d = new Date();
-let day = weekday[d.getDay()];
 
 
+// LEFT BOX WEATHER DETAILS
 function displayWeather(data){
 
 const weatherInfo = data
@@ -30,38 +25,48 @@ let tempFeelsLike = tempCFeelsLike.toFixed(0)
 
 
 // DAY
-currentDay.innerText = day;
 
 //CURRENT TEMP
-currentTemp.innerText=`${currentTempC}°C`;
-
-
-// FEELS LIKE TIME
-feelsLikeTemp.innerHTML=`Feels like ${tempFeelsLike}°C`;
-
-
+currentTemp.innerHTML=`<p class="primary-temp primary-text">${currentTempC}°C</p>
+               <p class="feels-like-temp">Feels like ${tempFeelsLike}°C</p>`;
 
 
 }
 
 
+
+// LEFT BOX
 // DISPLAY LOCATION
 function displayLocation(data){
-const time_container = document.querySelector('.time')  
-const header_time = document.querySelector('.header-time')
+  // get day
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const d = new Date();
+let day = weekday[d.getDay()];
 
+const currentDay = document.querySelector('.day-place-container')
+const currentTime = document.querySelector('.time-container')
+
+const header_time = document.querySelector('.header-time-container')
 const time = convertTime(data.formatted)
-
-
-const city = data.cityName
+const city = data.regionName
 const country = data.countryName
 
-place.innerText =`${city}, ${country}`;
-time_container.innerHTML=`${time}`;
-header_time.innerHTML=`${time}`;
+// place all goods
+console.log("🚀 ~ displayLocation ~ currentTime:", currentTime)
+currentDay.innerHTML = ` 
+<span><p class="place-container">${city}, ${country}</p></span>
+<span><p class="current-day">${day}</p></span>`;
+
+header_time.innerHTML=` <i class="fa-solid fa-clock"></i>
+                            <p class="header-time">${time}</p>`;
+
+
+currentTime.innerHTML=`
+<i class="fa-solid fa-clock"></i>
+<p class="time">${time}</p>`;
 }
 
-
+// CONVERTS MILITARY TIME
 function convertTime(raw_time){
 
 
@@ -91,6 +96,8 @@ function convertTime(raw_time){
 }
 
 
+// --------------------------------------
+
 function showError(){
 weather_details.innerHTML =`<p class="error-message">Please allow location access to enable full functionality of this app."</p>`;
 
@@ -104,7 +111,7 @@ navigator.geolocation.getCurrentPosition(success, error, options)
 }
 
 
-
+// RIGHT BOX VARIABLES
 // WEATHER ICON CONTAINER
 const weatherIconContainer = document.querySelector('.weather-icon-container')
 const maxTemp = document.querySelector('.max-temp-container')
@@ -138,7 +145,7 @@ const weather_conditions = {
 }
 
 
-
+// RIGHT BOX
 function displayIcon(data){
 // console.log(data.weather[0].icon)
 // const updated_weather = "50n";
