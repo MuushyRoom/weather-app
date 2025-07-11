@@ -20,7 +20,7 @@ A simple weather application that fetches real-time weather data based on the us
 
 2. **FUNCTIONALITY**
 
-  ``` cd api_keys.js
+  ``` cd api_keys.js```
 - configure api_keys.js
   
   - WEATHER_API_KEY = 'GET API KEY @https://openweathermap.org/'
