@@ -22,10 +22,10 @@ A simple weather application that fetches real-time weather data based on the us
    
 This app uses the following public APIs:
 
-1. **[OpenWeatherMap API](https://openweathermap.org/)**  
+- **[OpenWeatherMap API](https://openweathermap.org/)**  
    Provides current weather data such as temperature, humidity, and conditions.
 
-2. **[TimeZoneDB API](https://timezonedb.com/)**  
+- **[TimeZoneDB API](https://timezonedb.com/)**  
    Returns timezone and local time information based on your location.
 
     ```INSIDE "api_keys.js"```
