@@ -23,5 +23,5 @@ A simple weather application that fetches real-time weather data based on the us
   cd api_keys.js
 - configure api_keys.js
   
-  1.) WEATHER_API_KEY = 'GET API KEY @https://openweathermap.org/';
-  2.) TIMEZONE_API_KEY ='GET API KEY @https://timezonedb.com/';
+  - WEATHER_API_KEY = 'GET API KEY @https://openweathermap.org/'
+  - TIMEZONE_API_KEY ='GET API KEY @https://timezonedb.com/'
