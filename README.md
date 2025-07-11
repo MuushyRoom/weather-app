@@ -32,4 +32,7 @@ This app uses the following public APIs:
    - const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
      
    - const TIMEZONE_API_KEY = 'YOUR_TIMEZONEDB_API_KEY';
-  
+
+   3.**Allow location access**
+
+   - When prompted by your browser, allow geolocation access so the app can detect your location and show the weather and time accordingly.
