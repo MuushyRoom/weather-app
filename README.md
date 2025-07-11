@@ -18,10 +18,18 @@ A simple weather application that fetches real-time weather data based on the us
    cd weather-app
    ```
 
-2. **FUNCTIONALITY**
+2. **🔌 APIs Used**
+   
+This app uses the following public APIs:
 
-     ``` cd api_keys.js```
-- configure api_keys.js
+1. **[OpenWeatherMap API](https://openweathermap.org/)**  
+   Provides current weather data such as temperature, humidity, and conditions.
+
+2. **[TimeZoneDB API](https://timezonedb.com/)**  
+   Returns timezone and local time information based on your location.
+
+   1. configure api_keys.js
+       ``` cd api_keys.js```
+   - const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
+   -const TIMEZONE_API_KEY = 'YOUR_TIMEZONEDB_API_KEY';
   
-  - WEATHER_API_KEY = 'GET API KEY @https://openweathermap.org/'
-  - TIMEZONE_API_KEY ='GET API KEY @https://timezonedb.com/'
