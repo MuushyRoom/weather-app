@@ -29,7 +29,8 @@ This app uses the following public APIs:
    Returns timezone and local time information based on your location.
 
    1. configure api_keys.js
-       ``` cd api_keys.js```
+
+      ``` cd api_keys.js```
    - const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
    -const TIMEZONE_API_KEY = 'YOUR_TIMEZONEDB_API_KEY';
   
