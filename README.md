@@ -36,3 +36,6 @@ This app uses the following public APIs:
    3.**Allow location access**
 
    - When prompted by your browser, allow geolocation access so the app can detect your location and show the weather and time accordingly.
+
+##Live Preview
+- https://muushyroom.github.io/weather-app/
